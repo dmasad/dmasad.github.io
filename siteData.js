@@ -13,7 +13,7 @@ Sidebar: [
 Structure is {text, url}
 */
 	{text: "About", url: 'index.html'},
-	{text: "Research", url: 'Research.html'},
+	{text: "Research", url: 'research.html'},
 	{text: 'R&eacute;sum&eacute;', url: "resume.html"}
 
 ],
