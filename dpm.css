@@ -1,0 +1,232 @@
+/*
+
+CSS Template
+Based on things here and there
+David Masad
+http://www.davidmasad.com
+*/
+
+
+/*
+
+MAIN BODY
+=========
+
+*/
+
+body {
+	font: 100%/1.4 Calibri, Verdana, Arial, Helvetica, sans-serif;
+	/* background: #EAEAEA; */
+	background-image: url("images/grey.png"); /* From http://subtlepatterns.com */
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+.main {
+	width: 960px;
+	margin: 0;
+	overflow: hidden;
+}
+
+
+.content {
+	background-color: #FFFFFF;
+	border-left: 1px solid #CCC;
+	padding: 10px 0;
+	width: 700px;
+	float: left;
+	margin: 10px;
+}
+
+.FrontPage {
+	width: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.content a { 
+	color: #800000;
+}
+
+
+h1 {
+	color: #800000;
+	margin: 5px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+
+h2 {
+	color: #800000;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+
+
+
+/* SIDEBAR
+========= */
+
+.sidebar {
+	background-color: #FFFFFF;
+	float: left;
+	width: 200px;
+	margin: 10px;
+	height: auto;
+}
+
+/* SIDEBAR BUTTONS */
+ul.sidebarButtons {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border-top: 1px solid #ccc;
+	margin-bottom: 5px;
+}
+
+ul.sidebarButtons li {
+	border-bottom: 1px solid #ccc;
+}
+
+ul.sidebarButtons a, ul.sidebarButtons a:visited {
+	padding: 5px 5px 5px 15px;
+	color: #800000;
+	text-align: left;
+	display: block; 
+	width: 180px;  
+	text-decoration: none;
+}
+
+ul.sidebarButtons a:hover, ul.sidebarButtons a:active, ul.sidebarButtons a:focus { 
+	background: #800000;
+	color: #FFF;
+}
+
+.sidebar img {
+	padding: 5px;
+}
+
+
+
+/*
+PROJECT CONTAINERS
+================== 
+*/
+.projectContainer {
+	float: left;
+	margin-left: 5px;
+	padding-left: 5px;
+	margin-right:5px;
+	padding-right:5px;
+	width: 98%;
+	height: auto;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+
+
+}
+
+/* Testing hover 
+.projectContainer:hover {
+	background: black;
+	opacity: 0.8;
+	color: white;
+}
+*/
+
+.projectImage{
+	padding: 5px;
+	vertical-align: middle;
+	width:30%;
+	float:left;
+}
+
+.projectText {
+	float: left;
+	text-align: left;
+	width:60%;
+	padding: 5px;
+}
+
+p.projectLinks a {
+	padding-right: 20px;
+
+}
+
+.projectText h3, .projectText h4 {
+	margin: 0;
+}
+
+/* 
+RESUME ITEMS
+*/
+
+.Resume {
+	font: 100%/1.0 Calibri, Verdana, Arial, Helvetica, sans-serif;
+	padding: 0;
+
+}
+
+.Resume h3, .Resume h4 {
+	margin: 0;
+	padding: 0;
+}
+
+.resumeSection {
+	float: left;
+	margin: 5px;
+	padding-left: 5px;
+	width: 98%;
+	height: auto;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+
+}
+.resumeSectionHeading {
+	/*padding-left: 5px;*/
+	padding: 0;
+	vertical-align: middle;
+
+	width:20%;
+	height: 100%;
+	float:left;
+	font-weight: bold;
+	font-size: 18px;
+	position: absolute;
+}
+
+.resumeSectionText {
+	float: right;
+	text-align: left;
+	width:70%;
+	padding-top: 0;
+	padding-left:40px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	border-left: 1px solid #ccc;
+	
+}
+
+.resumeSectionDoubleColumn {
+	width: 50%;
+	float: left;
+	position: relative;
+}
+
+.resumeSectionText p{
+	margin: 0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+ul.resumeSectionText {
+	margin-top: 2px;
+	padding-left: 5px;
+	margin-left: 20px;
+}
+ul.resumeSectionText li {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+

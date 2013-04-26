@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="dpm.css" />
+	<script type="text/javascript" src="siteData.js"></script>
+	<script type="text/javascript" src="handlebars.js"></script>
+</head>
+<body>
+<div class="main">
+	<div class="sidebar" id="sidebar">
+		<script id="sidebarTemplate" type="text/x-handlebars-template">
+			<ul class='sidebarButtons'>
+			{{#each Sidebar}}
+			<li>{{{insert_link this}}}</li>
+			{{/each}}
+			</ul>
+
+		<h3>Contact</h3>
+		<p><a href="mailto:david.masad@gmail.com">david.masad@gmail.com</a></p>
+		<a href="https://twitter.com/badnetworker"><img src="images/twitter-bird-light-bgs.png" width="50" height="50"></a>
+		<a href="http://www.linkedin.com/in/dmasad"><img src="images/linkedin.png" width="50" height="50"></a>
+		<a href="https://github.com/dmasad/"><img src="images/octocat.png" width="50" height="50"></a>
+		</script>
+		
+	</div>
+	
+	<div class="content" id='content'>
+	<script id="mainTemplate" type="text/x-handlebars-template">
+		<h1>David Masad</h1>
+		<div class="FrontPage">
+		{{#each About}}
+		<p>{{{this}}}</p>
+		{{/each}}
+		</div>
+	</script>
+	</div>
+
+	<script type="text/javascript">
+		//Set up the helper:
+
+		Handlebars.registerHelper('insert_link', function(link) {
+			return "<a href='"+link.url+"'>" + link.text + "</a>";
+		});
+
+		Handlebars.registerHelper('plain_text', function(fullText) {
+			var temp = document.createElement("div");
+			temp.innerHTML = fullText;
+			var plain_text = temp.textContent;
+			return plain_text
+		});
+
+		// Compile sidebar
+		var sidebarTemplate = document.getElementById('sidebarTemplate').innerHTML;
+		var sidebarCompiler = Handlebars.compile(sidebarTemplate);
+		document.getElementById("sidebar").innerHTML = sidebarCompiler(siteData);
+
+		// Compile main area:
+		
+		var mainTemplate = document.getElementById('mainTemplate').innerHTML;
+		var mainCompiler = Handlebars.compile(mainTemplate);
+		document.getElementById('content').innerHTML = mainCompiler(siteData);
+		
+	</script>
+</div>
+
+
+</body>
+</html>
